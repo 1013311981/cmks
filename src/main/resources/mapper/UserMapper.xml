@@ -2,11 +2,11 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.cm.cmks.cmks.mapper.UserMapper">
 
-    <select id="queryUserInfo" parameterType="java.lang.Long" resultType="com.cm.cmks.cmks.entity.UserInfo">
+    <select id="queryUserInfo" parameterType="java.lang.Integer" resultType="com.cm.cmks.cmks.entity.User">
         select
-        userid,nickName,avatarUrl
-        from um_user
-        where userid = #{id,jdbcType=BIGINT}
+        *
+        from user
+        where id = #{id}
     </select>
 
 </mapper>

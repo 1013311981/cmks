@@ -1,11 +1,16 @@
 package com.cm.cmks.cmks.mapper;
 
 
-import com.cm.cmks.cmks.entity.UserInfo;
+import com.cm.cmks.cmks.entity.User;
+
 import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Repository;
 
 @Mapper
+@Repository
 public interface UserMapper {
 
-   UserInfo queryUserInfo(long id);
+   User queryUserInfo(int id);
+
+   void save(User user);
 }
