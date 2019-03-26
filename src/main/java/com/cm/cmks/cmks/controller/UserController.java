@@ -82,7 +82,7 @@ public class UserController {
 //            resultMap.put("nickname",user.getNickname());
 //            resultMap.put("avatar",user.getAvatar());
 
-            return new Response("登录成功");
+            return new Response(resultMap);
         }else{
             return new Response("登录失败");
         }
